@@ -25,6 +25,7 @@
         "@ionic-native/status-bar": "3.12.1",
         "@ionic-native/vibration": "^4.2.1",
         "@ionic/storage": "2.0.1",
+        "cordova-plugin-ionic": "^1.1.8",
         "cordova-plugin-vibration": "^2.1.5",
         "ionic-angular": "3.6.1",
         "ionicons": "3.0.0",
@@ -39,7 +40,12 @@
     "description": "An Ionic project",
     "cordova": {
         "plugins": {
-            "cordova-plugin-vibration": {}
+            "cordova-plugin-vibration": {},
+            "cordova-plugin-ionic": {
+                "APP_ID": "b4177887",
+                "CHANNEL_NAME": "Master",
+                "UPDATE_METHOD": "auto"
+            }
         }
     }
 }
