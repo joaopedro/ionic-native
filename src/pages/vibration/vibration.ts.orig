@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+<<<<<<< HEAD
 import { Vibration } from '@ionic-native/vibration';
 
+=======
+import {Vibration} from '@ionic-native/vibration';
+  
+>>>>>>> 943db4b48d8123307045fbee7271a2e0b453a2b2
 /**
  * Generated class for the VibrationPage page.
  *
@@ -10,14 +15,18 @@ import { Vibration } from '@ionic-native/vibration';
  * Ionic pages and navigation.
  */
 
-@IonicPage()  
+@IonicPage()
 @Component({
   selector: 'page-vibration',
   templateUrl: 'vibration.html',
 })
 export class VibrationPage {
 
+<<<<<<< HEAD
   constructor(private vibration: Vibration) {
+=======
+  constructor(public navCtrl: NavController, public navParams: NavParams, private vibration: Vibration) {
+>>>>>>> 943db4b48d8123307045fbee7271a2e0b453a2b2
   }
 
   ionViewDidLoad() {
