@@ -42,7 +42,7 @@
         "plugins": {
             "cordova-plugin-vibration": {},
             "cordova-plugin-ionic": {
-                "APP_ID": "b4177887",
+                "APP_ID": "657b9261",
                 "CHANNEL_NAME": "Master",
                 "UPDATE_METHOD": "auto"
             }
