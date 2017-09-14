@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { ToastController } from 'ionic-angular';
 /**
  * Generated class for the GeolocationPage page.
  *
@@ -18,7 +18,7 @@ export class GeolocationPage {
   location: {lat: number, long: number};
   autoLocation: {lat: number, long: number};
   
-  constructor(private geolocation: Geolocation) {
+  constructor(private geolocation: Geolocation, private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -26,15 +26,31 @@ export class GeolocationPage {
     watch.subscribe((data) => {
       this.autoLocation = {lat: data.coords.latitude,
         long: data.coords.longitude};
-    });
+        let autolocationtoast = this.toastCtrl.create({
+          message: 'AutoLocation:' + this.autoLocation,
+          duration: 3000
+        });
+        autolocationtoast.present();
+      });
   }
 
   getGeolocation(){
     this.geolocation.getCurrentPosition().then((resp) => {
       this.location = {lat: resp.coords.latitude,
                       long: resp.coords.longitude};
+      let locationtoast = this.toastCtrl.create({
+        message: 'Location:' + this.location,
+        duration: 3000
+      });
+      locationtoast.present();
+              
      }).catch((error) => {
+        let errortoast = this.toastCtrl.create({
+          message: 'Error' + error,
+          duration: 3000
+        });
        console.log('Error getting location', error);
+       errortoast.present();
      });
   }
 }
