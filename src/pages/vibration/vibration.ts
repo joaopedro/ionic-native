@@ -24,7 +24,7 @@ export class VibrationPage {
     console.log('ionViewDidLoad VibrationPage');
   }
 
-  vubrate(){
+  vibrate(){
     this.vibration.vibrate(2000);
   }
 
