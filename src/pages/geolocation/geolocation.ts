@@ -46,7 +46,7 @@ export class GeolocationPage {
               
      }).catch((error) => {
         let errortoast = this.toastCtrl.create({
-          message: 'Error' + error,
+          message: 'Error' + error.message,
           duration: 3000
         });
        console.log('Error getting location', error);
