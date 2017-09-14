@@ -1,3 +1,4 @@
+import { GeolocationPage } from './../pages/geolocation/geolocation';
 import { VibrationPage } from './../pages/vibration/vibration';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Vibration', component: VibrationPage}
+      { title: 'Vibration', component: VibrationPage},
+      { title: 'Geolocation', component: GeolocationPage }
     ];
 
   }
