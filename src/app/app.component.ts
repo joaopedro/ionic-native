@@ -1,3 +1,4 @@
+import { CameraPage } from './../pages/camera/camera';
 import { GeolocationPage } from './../pages/geolocation/geolocation';
 import { VibrationPage } from './../pages/vibration/vibration';
 import { Component, ViewChild } from '@angular/core';
@@ -16,17 +17,18 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Vibration', component: VibrationPage},
-      { title: 'Geolocation', component: GeolocationPage }
+      { title: 'Home', component: HomePage , icon: 'add'},
+      { title: 'List', component: ListPage, icon: 'add' },
+      { title: 'Vibration', component: VibrationPage, icon: 'alarm'},
+      { title: 'Geolocation', component: GeolocationPage, icon: 'map' },
+      { title: 'Camera', component: CameraPage, icon: 'camera'}
     ];
 
   }

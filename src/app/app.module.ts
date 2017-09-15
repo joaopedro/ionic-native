@@ -1,3 +1,4 @@
+import { CameraPage } from './../pages/camera/camera';
 import { GeolocationPage } from './../pages/geolocation/geolocation';
 import { VibrationPage } from './../pages/vibration/vibration';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Vibration } from '@ionic-native/vibration';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     HomePage,
     ListPage,
     VibrationPage,
-    GeolocationPage
+    GeolocationPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -31,13 +34,15 @@ import { Geolocation } from '@ionic-native/geolocation';
     HomePage,
     ListPage,
     VibrationPage,
-    GeolocationPage
+    GeolocationPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Vibration,
     Geolocation,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
